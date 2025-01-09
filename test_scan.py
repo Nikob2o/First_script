@@ -2,21 +2,23 @@
 
 import sys
 
-"""
+
 def demander_nom():
-    nom = ""
+    import sys  # Assurez-vous d'importer `sys` si ce n'est pas déjà fait
+    print("Comment t'appelles-tu ?")
+    nom = input("- ").strip()  # Supprime les espaces avant/après l'entrée de l'utilisateur
 
-    print("Comment t'appelles-tu ? ")
-    nom = input("- ")
+    # Correction de la condition
+    condition = nom == "Nicolas" or nom == "Marc"
 
-    condition = nom == "Nicolas"# or "Marc"
-    print(condition)
+    print(condition)  # Affiche True ou False
     if condition:
         print(f"- Bonjour {nom}")
     else:
         print("- Je ne te connais pas")
-        sys.exit()
+        sys.exit()  # Quitte le programme si le nom ne correspond pas
     return nom
+
 
 #####################################################################
 
@@ -36,8 +38,6 @@ def demander_calcul():
         sys.exit()
 
 ######################################################################
-"""
-
 
 
 def calcul_a_faire():
@@ -58,9 +58,7 @@ def calcul_a_faire():
 
 ########################################################################
 
-#nom1 = demander_nom()
-
-#demander_calcul()
-
+demander_nom()
+demander_calcul()
 calcul_a_faire()
 #Nocob
